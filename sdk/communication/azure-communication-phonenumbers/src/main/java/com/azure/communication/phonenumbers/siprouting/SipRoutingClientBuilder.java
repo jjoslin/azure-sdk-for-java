@@ -93,12 +93,6 @@ public final class SipRoutingClientBuilder
     private final List<HttpPipelinePolicy> perRetryPolicies = new ArrayList<>();
 
     /**
-     * Creates a new instance of {@link SipRoutingClientBuilder}.
-     */
-    public SipRoutingClientBuilder() {
-    }
-
-    /**
      * Sets endpoint of the service
      *
      * @param endpoint url of the service

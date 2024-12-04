@@ -1,6 +1,6 @@
 # Release History
 
-## 7.18.0-beta.2 (Unreleased)
+## 7.18.0-beta.1 (Unreleased)
 
 ### Features Added
 
@@ -9,6 +9,17 @@
 ### Bugs Fixed
 
 ### Other Changes
+
+## 7.17.7 (2024-12-04)
+
+### Other Changes
+
+#### Dependency Updates
+
+- Upgraded `azure-core` from `1.54.0` to version `1.54.1`.
+- Upgraded `azure-core-amqp` from `2.9.11` to version `2.9.12`.
+- Upgraded `azure-core-http-netty` from `1.15.6` to version `1.15.7`.
+
 
 ## 7.17.6 (2024-11-12)
 

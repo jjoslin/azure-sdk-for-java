@@ -125,7 +125,18 @@ class EventHubMessageSerializer implements MessageSerializer {
         }
 
         final EventData eventData = (EventData) object;
-        return MessageUtils.toProtonJMessage(eventData.getRawAmqpMessage());
+        final AmqpAnnotatedMessage amqpAnnotatedMessage = eventData.getRawAmqpMessage();
+        final Message protonJ = MessageUtils.toProtonJMessage(amqpAnnotatedMessage);
+
+        // Removing any system properties like ENQUEUED TIME, OFFSET, SEQUENCE NUMBER.
+        // These values are populated in the case that the user received the event and is
+        // resending the event.
+        if (protonJ.getMessageAnnotations() != null && protonJ.getMessageAnnotations().getValue() != null) {
+            EventData.RESERVED_SYSTEM_PROPERTIES
+                .forEach(key -> protonJ.getMessageAnnotations().getValue().remove(Symbol.valueOf(key)));
+        }
+
+        return protonJ;
     }
 
     @SuppressWarnings("unchecked")

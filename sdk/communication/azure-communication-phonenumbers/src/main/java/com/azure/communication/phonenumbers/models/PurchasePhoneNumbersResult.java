@@ -3,13 +3,6 @@
 
 package com.azure.communication.phonenumbers.models;
 
-/**
- * The PurchasePhoneNumbersResult model.
- */
+/** The PurchasePhoneNumbersResult model. */
 public final class PurchasePhoneNumbersResult {
-    /**
-     * Creates a new instance of {@link PurchasePhoneNumbersResult}.
-     */
-    public PurchasePhoneNumbersResult() {
-    }
 }

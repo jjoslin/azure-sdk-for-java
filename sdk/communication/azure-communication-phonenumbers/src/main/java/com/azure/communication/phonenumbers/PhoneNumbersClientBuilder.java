@@ -96,12 +96,6 @@ public final class PhoneNumbersClientBuilder
     private String acceptLanguage;
 
     /**
-     * Creates a new instance of {@link PhoneNumbersClientBuilder}.
-     */
-    public PhoneNumbersClientBuilder() {
-    }
-
-    /**
      * Set endpoint of the service
      *
      * @param endpoint url of the service

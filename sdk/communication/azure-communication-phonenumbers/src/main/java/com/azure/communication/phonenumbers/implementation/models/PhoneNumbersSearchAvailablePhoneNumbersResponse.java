@@ -9,14 +9,12 @@ import com.azure.core.http.HttpHeaders;
 import com.azure.core.http.HttpRequest;
 import com.azure.core.http.rest.ResponseBase;
 
-/**
- * Contains all response data for the searchAvailablePhoneNumbers operation.
- */
+/** Contains all response data for the searchAvailablePhoneNumbers operation. */
 public final class PhoneNumbersSearchAvailablePhoneNumbersResponse
     extends ResponseBase<PhoneNumbersSearchAvailablePhoneNumbersHeaders, PhoneNumberSearchResult> {
     /**
      * Creates an instance of PhoneNumbersSearchAvailablePhoneNumbersResponse.
-     * 
+     *
      * @param request the request which resulted in this PhoneNumbersSearchAvailablePhoneNumbersResponse.
      * @param statusCode the status code of the HTTP response.
      * @param rawHeaders the raw headers of the HTTP response.
@@ -28,11 +26,7 @@ public final class PhoneNumbersSearchAvailablePhoneNumbersResponse
         super(request, statusCode, rawHeaders, value, headers);
     }
 
-    /**
-     * Gets the deserialized response body.
-     * 
-     * @return the deserialized response body.
-     */
+    /** @return the deserialized response body. */
     @Override
     public PhoneNumberSearchResult getValue() {
         return super.getValue();

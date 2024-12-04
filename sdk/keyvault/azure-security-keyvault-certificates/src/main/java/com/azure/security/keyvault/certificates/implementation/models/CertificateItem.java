@@ -15,9 +15,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Objects;
 
-/**
- * The certificate item containing certificate metadata.
- */
+/** The certificate item containing certificate metadata. */
 @Fluent
 public class CertificateItem implements JsonSerializable<CertificateItem> {
     /*
@@ -40,15 +38,13 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
      */
     private Base64Url x509Thumbprint;
 
-    /**
-     * Creates an instance of CertificateItem class.
-     */
+    /** Creates an instance of CertificateItem class. */
     public CertificateItem() {
     }
 
     /**
      * Get the id property: Certificate identifier.
-     * 
+     *
      * @return the id value.
      */
     public String getId() {
@@ -57,7 +53,7 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
 
     /**
      * Set the id property: Certificate identifier.
-     * 
+     *
      * @param id the id value to set.
      * @return the CertificateItem object itself.
      */
@@ -68,7 +64,7 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
 
     /**
      * Get the attributes property: The certificate management attributes.
-     * 
+     *
      * @return the attributes value.
      */
     public CertificateAttributes getAttributes() {
@@ -77,7 +73,7 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
 
     /**
      * Set the attributes property: The certificate management attributes.
-     * 
+     *
      * @param attributes the attributes value to set.
      * @return the CertificateItem object itself.
      */
@@ -88,7 +84,7 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
 
     /**
      * Get the tags property: Application specific metadata in the form of key-value pairs.
-     * 
+     *
      * @return the tags value.
      */
     public Map<String, String> getTags() {
@@ -97,7 +93,7 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
 
     /**
      * Set the tags property: Application specific metadata in the form of key-value pairs.
-     * 
+     *
      * @param tags the tags value to set.
      * @return the CertificateItem object itself.
      */
@@ -108,7 +104,7 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
 
     /**
      * Get the x509Thumbprint property: Thumbprint of the certificate.
-     * 
+     *
      * @return the x509Thumbprint value.
      */
     public byte[] getX509Thumbprint() {
@@ -120,7 +116,7 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
 
     /**
      * Set the x509Thumbprint property: Thumbprint of the certificate.
-     * 
+     *
      * @param x509Thumbprint the x509Thumbprint value to set.
      * @return the CertificateItem object itself.
      */
@@ -133,9 +129,6 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
         return this;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     public JsonWriter toJson(JsonWriter jsonWriter) throws IOException {
         jsonWriter.writeStartObject();
@@ -148,10 +141,10 @@ public class CertificateItem implements JsonSerializable<CertificateItem> {
 
     /**
      * Reads an instance of CertificateItem from the JsonReader.
-     * 
+     *
      * @param jsonReader The JsonReader being read.
      * @return An instance of CertificateItem if the JsonReader was pointing to an instance of it, or null if it was
-     * pointing to JSON null.
+     *     pointing to JSON null.
      * @throws IOException If an error occurs while reading the CertificateItem.
      */
     public static CertificateItem fromJson(JsonReader jsonReader) throws IOException {

@@ -35,15 +35,13 @@ public final class DeletedSecretBundle extends SecretBundle {
      */
     private Long deletedDate;
 
-    /**
-     * Creates an instance of DeletedSecretBundle class.
-     */
+    /** Creates an instance of DeletedSecretBundle class. */
     public DeletedSecretBundle() {
     }
 
     /**
      * Get the recoveryId property: The url of the recovery object, used to identify and recover the deleted secret.
-     * 
+     *
      * @return the recoveryId value.
      */
     public String getRecoveryId() {
@@ -52,7 +50,7 @@ public final class DeletedSecretBundle extends SecretBundle {
 
     /**
      * Set the recoveryId property: The url of the recovery object, used to identify and recover the deleted secret.
-     * 
+     *
      * @param recoveryId the recoveryId value to set.
      * @return the DeletedSecretBundle object itself.
      */
@@ -63,7 +61,7 @@ public final class DeletedSecretBundle extends SecretBundle {
 
     /**
      * Get the scheduledPurgeDate property: The time when the secret is scheduled to be purged, in UTC.
-     * 
+     *
      * @return the scheduledPurgeDate value.
      */
     public OffsetDateTime getScheduledPurgeDate() {
@@ -75,7 +73,7 @@ public final class DeletedSecretBundle extends SecretBundle {
 
     /**
      * Get the deletedDate property: The time when the secret was deleted, in UTC.
-     * 
+     *
      * @return the deletedDate value.
      */
     public OffsetDateTime getDeletedDate() {
@@ -85,54 +83,41 @@ public final class DeletedSecretBundle extends SecretBundle {
         return OffsetDateTime.ofInstant(Instant.ofEpochSecond(this.deletedDate), ZoneOffset.UTC);
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    /** {@inheritDoc} */
     @Override
     public DeletedSecretBundle setValue(String value) {
         super.setValue(value);
         return this;
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    /** {@inheritDoc} */
     @Override
     public DeletedSecretBundle setId(String id) {
         super.setId(id);
         return this;
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    /** {@inheritDoc} */
     @Override
     public DeletedSecretBundle setContentType(String contentType) {
         super.setContentType(contentType);
         return this;
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    /** {@inheritDoc} */
     @Override
     public DeletedSecretBundle setAttributes(SecretAttributes attributes) {
         super.setAttributes(attributes);
         return this;
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    /** {@inheritDoc} */
     @Override
     public DeletedSecretBundle setTags(Map<String, String> tags) {
         super.setTags(tags);
         return this;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     public JsonWriter toJson(JsonWriter jsonWriter) throws IOException {
         jsonWriter.writeStartObject();
@@ -147,10 +132,10 @@ public final class DeletedSecretBundle extends SecretBundle {
 
     /**
      * Reads an instance of DeletedSecretBundle from the JsonReader.
-     * 
+     *
      * @param jsonReader The JsonReader being read.
      * @return An instance of DeletedSecretBundle if the JsonReader was pointing to an instance of it, or null if it was
-     * pointing to JSON null.
+     *     pointing to JSON null.
      * @throws IOException If an error occurs while reading the DeletedSecretBundle.
      */
     public static DeletedSecretBundle fromJson(JsonReader jsonReader) throws IOException {

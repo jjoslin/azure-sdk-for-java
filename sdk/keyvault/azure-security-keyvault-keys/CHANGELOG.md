@@ -10,6 +10,15 @@
 
 ### Other Changes
 
+## 4.9.1 (2024-12-04)
+
+### Other Changes
+
+#### Dependency Updates
+
+- Upgraded `azure-core` from `1.53.0` to version `1.54.1`.
+- Upgraded `azure-core-http-netty` from `1.15.5` to version `1.15.7`.
+
 
 ## 4.9.0 (2024-10-15)
 - Added a new configuration flag to cryptography clients that allows deferring all cryptographic operations to the Key Vault service. ([#40384](https://github.com/Azure/azure-sdk-for-java/pull/40384))
@@ -41,7 +50,6 @@
 - Upgraded `azure-core` from `1.50.0` to version `1.51.0`.
 - Upgraded `azure-core-http-netty` from `1.15.2` to version `1.15.3`.
 
-
 ## 4.9.0-beta.1 (2024-07-29)
 
 ### Features Added
@@ -51,8 +59,9 @@
 
 #### Dependency Updates
 
-- Upgraded `azure-core` from `1.49.1` to version `1.50.0`.
 - Upgraded `azure-core-http-netty` from `1.15.1` to version `1.15.2`.
+- Upgraded `azure-json` from `1.1.0` to version `1.2.0`.
+- Upgraded `azure-core` from `1.49.1` to version `1.50.0`.
 
 ## 4.8.6 (2024-07-29)
 
